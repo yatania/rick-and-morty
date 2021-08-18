@@ -1,3 +1,8 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background-color: #e9e6f2;
@@ -71,8 +76,13 @@ input[type="checkbox"]:checked + p:before {
 
 .App {
   display: flex;
-  justify-content: stretch;
-  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    width: 1260px;
+    margin: 0 auto;
+  }
 
   &__sidebar {
     @extend %stretch-panel;

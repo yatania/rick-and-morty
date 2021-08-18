@@ -1,0 +1,27 @@
+.cards {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    border-radius: 10px;
+  }
+
+  &__image {
+    display: inline-flex;
+    max-width: 100%;
+  }
+
+  &__title {
+    margin: 0 auto;
+  }
+
+  &__info {
+    padding-left: 20px;
+  }
+}

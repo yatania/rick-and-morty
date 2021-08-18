@@ -1,0 +1,21 @@
+.Loader {
+
+  &__content {
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    border: 0.3rem solid #ddd;
+    border-radius: 50%;
+    border-left-color: #000;
+    animation: loadingSpinner 1.2s infinite linear;
+  }
+}
+
+@keyframes loadingSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
