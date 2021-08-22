@@ -1,15 +1,19 @@
 .cards {
   display: grid;
-  align-items: center;
-  justify-items: center;
+  justify-content: center;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
 
   &__card {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    max-width: 250px;
     border-radius: 10px;
+    transition: background-color 500ms;
+
+    &:hover {
+      background-color: rgba(239, 250, 243, 0.5);
+    }
   }
 
   &__image {
@@ -18,7 +22,10 @@
   }
 
   &__title {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   &__info {

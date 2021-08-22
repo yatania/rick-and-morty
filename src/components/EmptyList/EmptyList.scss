@@ -1,0 +1,28 @@
+.EmptyList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    display: block;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px #06d6a0;
+    transition: background-color 500ms;
+    animation: shadow 5s infinite;
+  }
+
+  &__text {
+    position: absolute;
+    top: 10%;
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+@keyframes shadow {
+  50% {
+    box-shadow: 0 0 30px 10px #118ab2;
+  }
+}

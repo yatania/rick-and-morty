@@ -1,0 +1,43 @@
+.Episodes {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}
+
+.table {
+  max-width: 100%;
+
+  &__item {
+
+    &:first-child {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    &:hover {
+      background-color: rgba(239, 250, 243, 0.5);
+    }
+  }
+
+  &__titles {
+    text-align: center;
+  }
+
+  &__title {
+    background-color: #a49add;
+  }
+}

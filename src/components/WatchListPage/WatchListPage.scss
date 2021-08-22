@@ -1,8 +1,11 @@
-.TodoList {
-  width: 100%;
+.WatchList {
+  max-width: 100%;
+  padding: 20px;
 
-  &__user-button--selected {
-    background-color: #4d457b;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__list {
@@ -27,5 +30,9 @@
   &__item--unchecked {
     background-color: #ffe0db;
     color: #ff3626;
+  }
+
+  &__text {
+    margin-left: 10px;
   }
 }

@@ -1,0 +1,57 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1000ms;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__info {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+  &__text {
+    align-self: start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    animation: scaling 0.5s linear;
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

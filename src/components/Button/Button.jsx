@@ -1,24 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({ name, classes, cb, disabled }) => {
-  const click = () => cb();
+export const Button = ({ text, classes, onClick, disabled }) => {
+  const click = () => onClick();
 
   return (
     <button
       type="button"
+      style={{
+        'min-width': '100px',
+      }}
       className={classes}
       disabled={disabled}
       onClick={click}
     >
-      {name}
+      {text}
     </button>
   );
 };
 
+Button.defaultProps = {
+  disabled: false,
+  onClick: true,
+};
+
 Button.propTypes = {
-  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   classes: PropTypes.string.isRequired,
-  cb: PropTypes.func.isRequired,
-  disabled: PropTypes.bool.isRequired,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
 };

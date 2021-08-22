@@ -1,0 +1,16 @@
+.locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    display: inline-block;
+
+  }
+}

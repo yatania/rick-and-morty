@@ -5,6 +5,7 @@ import { Loader } from '../../Loader/Loader';
 
 import 'bulma';
 import './Characters.scss';
+import { Character } from '../Character/Character';
 
 export const Characters = ({ characters, isLoading }) => {
   if (isLoading) {
@@ -14,29 +15,7 @@ export const Characters = ({ characters, isLoading }) => {
   return (
     <div className="cards">
       {characters.map(character => (
-        <div className="card cards__card" key={character.id}>
-          <div className="card-image">
-            <img
-              src={character.image}
-              alt="Character"
-              className="cards__image"
-            />
-          </div>
-          <h4 className="title is-4 is-uppercase py-4 mb-0 cards__title">
-            {character.name}
-          </h4>
-          <div className="cards__info mb-4">
-            <p>
-              {`Gender: ${character.gender}`}
-            </p>
-            <p>
-              {`Species: ${character.species}`}
-            </p>
-            <p>
-              {`Status: ${character.status}`}
-            </p>
-          </div>
-        </div>
+        <Character character={character} />
       ))}
     </div>
   );
@@ -51,6 +30,10 @@ Characters.propTypes = {
       gender: PropTypes.string.isRequired,
       species: PropTypes.string.isRequired,
       status: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      location: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }),
     }),
   ).isRequired,
   isLoading: PropTypes.bool.isRequired,
