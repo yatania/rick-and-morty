@@ -21,12 +21,11 @@ export const Button = ({ text, classes, onClick, disabled }) => {
 
 Button.defaultProps = {
   disabled: false,
-  onClick: true,
 };
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   classes: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
 };

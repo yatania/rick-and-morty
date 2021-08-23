@@ -9,10 +9,15 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    transition: background-color 500ms;
+    cursor: pointer;
+    transition: background-color 500ms,
+      transform 500ms,
+      box-shadow 500ms;
 
     &:hover {
       background-color: rgba(239, 250, 243, 0.5);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #06d6a0;
     }
   }
 

@@ -8,6 +8,8 @@ import { EmptyList } from '../EmptyList/EmptyList';
 import { InputFiltered } from '../InputFiltered/InputFiltered';
 import { Loader } from '../Loader/Loader';
 
+import './LocationsPage.scss';
+
 export const LocationsPage = () => {
   const [locations, setLocations] = useState([]);
   const [filteredLocations, setFilteredLocations] = useState([]);
@@ -150,18 +152,20 @@ export const LocationsPage = () => {
           )}
         </>
       )}
-      <Button
-        text="Previous"
-        disabled={info.pages === null}
-        classes="button"
-        onClick={prevPage}
-      />
-      <Button
-        text="Next"
-        disabled={info.pages === page}
-        classes="button"
-        onClick={nextPage}
-      />
+      <div className="locations__buttons">
+        <Button
+          text="Previous"
+          disabled={info.pages === null}
+          classes="button is-primary locations__buttons--prev"
+          onClick={prevPage}
+        />
+        <Button
+          text="Next"
+          disabled={info.pages === page}
+          classes="button is-primary locations__buttons--next"
+          onClick={nextPage}
+        />
+      </div>
     </div>
   );
 };

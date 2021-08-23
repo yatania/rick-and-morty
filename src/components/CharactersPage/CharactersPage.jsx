@@ -128,19 +128,19 @@ export const CharactersPage = () => {
         <SelectFilter
           values={genderValues}
           classes="is-primary"
-          name="gender"
+          name="all"
           handleChange={event => setFilterGender(event.target.value)}
         />
         <SelectFilter
           values={statusValues}
           classes="is-primary"
-          name="status"
+          name="all"
           handleChange={event => setFilterStatus(event.target.value)}
         />
         <SelectFilter
           values={speciesValues}
           classes="is-primary"
-          name="species"
+          name="all"
           handleChange={event => setFilterSpecies(event.target.value)}
         />
         <Button
