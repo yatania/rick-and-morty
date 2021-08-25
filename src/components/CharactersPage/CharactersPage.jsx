@@ -13,9 +13,9 @@ export const CharactersPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [info, setInfo] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
-  const [filterGender, setFilterGender] = useState('gender');
-  const [filterSpecies, setFilterSpecies] = useState('species');
-  const [filterStatus, setFilterStatus] = useState('status');
+  const [filterGender, setFilterGender] = useState('all');
+  const [filterSpecies, setFilterSpecies] = useState('all');
+  const [filterStatus, setFilterStatus] = useState('all');
 
   const charactersList = `${BASE_URL}/character/?page=${currentPage}`;
 
@@ -37,20 +37,16 @@ export const CharactersPage = () => {
     switch (filterGender) {
       case 'all':
         result = result.filter(character => character.gender !== undefined);
-
-        return result;
+        break;
       case 'male':
         result = result.filter(character => character.gender === 'Male');
-
-        return result;
+        break;
       case 'female':
         result = result.filter(character => character.gender === 'Female');
-
-        return result;
+        break;
       case 'unknown':
         result = result.filter(character => character.gender === 'unknown');
-
-        return result;
+        break;
       default:
         break;
     }
@@ -58,16 +54,13 @@ export const CharactersPage = () => {
     switch (filterSpecies) {
       case 'all':
         result = result.filter(character => character.species !== undefined);
-
-        return result;
+        break;
       case 'human':
         result = result.filter(character => character.species === 'Human');
-
-        return result;
+        break;
       case 'alien':
         result = result.filter(character => character.species === 'Alien');
-
-        return result;
+        break;
       default:
         break;
     }
@@ -75,20 +68,16 @@ export const CharactersPage = () => {
     switch (filterStatus) {
       case 'all':
         result = result.filter(character => character.status !== undefined);
-
-        return result;
+        break;
       case 'dead':
         result = result.filter(character => character.status === 'Dead');
-
-        return result;
+        break;
       case 'alive':
         result = result.filter(character => character.status === 'Alive');
-
-        return result;
+        break;
       case 'unknown':
         result = result.filter(character => character.status === 'unknown');
-
-        return result;
+        break;
       default:
         break;
     }
